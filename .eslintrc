@@ -1,6 +1,31 @@
 {
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["react", "react-hooks"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
+    "linebreak-style": ["error", "unix"],
     "semi": ["error", "always"],
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "curly": ["error", "multi"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
